@@ -189,6 +189,7 @@ footer span a {
 /* Responsividade início */
 @media (max-width: 475px) {
   body {
+    padding-top: 12rem;
     background: var(--color-secondary);
   }
 
@@ -224,7 +225,6 @@ footer span a {
   }
 
   main {
-    margin-top: 12rem;
     flex-direction: column;
     padding: 0.7rem;
   }
