@@ -1,0 +1,257 @@
+/* Estilos globais início */
+:root {
+  /* Cores */
+  --color-primary: #007a7a;
+  --color-secondary: #004d4d;
+  --color-white: #ffffff;
+  --color-gray-dark: #646464;
+  --color-gray-light: #ebebeb;
+
+  /* Fontes */
+  --font-family: "Sansation", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary) 0%,
+    var(--color-secondary) 75%
+  );
+}
+/* Estilos globais fim */
+
+/* Estilos do conteúdo principal início */
+main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 92%;
+  height: auto;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: var(--color-secondary);
+}
+
+.information-section {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  padding: 1rem;
+}
+
+.information-section label {
+  font-size: 1rem;
+  color: var(--color-gray-light);
+}
+
+.information-section select,
+.information-section input {
+  width: 100%;
+  height: 3.2rem;
+  padding-left: 0.5rem;
+  margin: 0.3rem 0 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+.information-section label input {
+  cursor: auto;
+}
+
+.convert-button {
+  width: 100%;
+  height: 3.2rem;
+  margin: 0.5rem 0 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  transition: 0.4s;
+}
+
+.convert-button:active {
+  transform: scale(0.95);
+}
+
+.currency-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+.currency-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  cursor: default;
+}
+
+.currency-box img {
+  height: 4rem;
+}
+
+.name-currency {
+  font-size: 1.1rem;
+  color: var(--color-gray-dark);
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}
+
+.arrow {
+  height: 3.5rem;
+  animation: rotate 4s infinite linear;
+}
+
+/* estilo da animação início */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} /* estilo da animação fim */
+/* Estilos do conteúdo principal fim */
+
+/* Estilos do rodapé início */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: 75px;
+  padding: 20px 0;
+}
+
+footer span {
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+footer span a {
+  color: var(--color-white);
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 3rem;
+}
+
+.redes-sociais i {
+  font-size: 1.45rem;
+  color: var(--color-white);
+}
+
+.redes-sociais a {
+  transition: 0.2s;
+}
+
+.redes-sociais a:hover {
+  transform: translate3d(-1px, 3px, 0px);
+}
+/* Estilos do rodapé fim */
+
+/* Responsividade início */
+@media (max-width: 475px) {
+  body {
+    background: var(--color-secondary);
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 9rem;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .information-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    top: 0;
+    text-align: center;
+    padding: 20px 15px;
+    background-color: var(--color-secondary);
+  }
+
+  .redes-sociais {
+    display: none;
+  }
+} /* Tela de celular */
+
+@media (max-width: 768px) {
+  body {
+    background: var(--color-secondary);
+  }
+
+  main {
+    margin-top: 12rem;
+    flex-direction: column;
+    padding: 0.7rem;
+  }
+
+  .information-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  .redes-sociais {
+    display: none;
+  }
+
+  footer {
+    top: 0;
+    background-color: var(--color-secondary);
+  }
+} /* Tela de tablet */
+
+@media (min-width: 1280px) {
+  main {
+    width: 80%;
+  }
+
+  .convert-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+  }
+} /* Tela de desktop */
+/* Responsividade fim */
