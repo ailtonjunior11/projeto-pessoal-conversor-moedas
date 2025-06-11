@@ -190,8 +190,8 @@ footer span a {
 
 /* Responsividade início */
 @media (max-width: 375px) {
-  main {
-    top: 8rem;
+  body {
+    padding-top: 150px;
   }
 }
 
@@ -201,7 +201,6 @@ footer span a {
   }
 
   main {
-    position: relative;
     flex-direction: column;
     width: 100%;
     top: 3rem;
