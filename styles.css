@@ -40,6 +40,7 @@ body {
 main {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 92%;
   height: auto;
@@ -188,16 +189,22 @@ footer span a {
 /* Estilos do rodapé fim */
 
 /* Responsividade início */
+@media (max-width: 375px) {
+  main {
+    top: 8rem;
+  }
+}
+
 @media (max-width: 475px) {
   body {
-    padding-top: 12rem;
     background: var(--color-secondary);
   }
 
   main {
+    position: relative;
     flex-direction: column;
     width: 100%;
-    margin-top: 9rem;
+    top: 3rem;
     padding: 0;
     border-radius: 0;
   }
@@ -228,6 +235,7 @@ footer span a {
   main {
     flex-direction: column;
     padding: 0.7rem;
+    margin-top: 15rem;
   }
 
   .information-section {
